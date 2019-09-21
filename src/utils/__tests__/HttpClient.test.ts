@@ -36,7 +36,7 @@ describe("HttpClient", () => {
 
   it("Should perform GET request", async () => {
     mockSuccessFetch(mockData);
-    const data = await API.get("/successful-fetch")
+    const data = await API.get("/successful-fetch");
     expect(data).toBe(mockData);
   });
 
@@ -46,12 +46,12 @@ describe("HttpClient", () => {
     try {
       await API.get("/failed-fetch");
     } catch (error) {
-      expect(error).toBe(mockError)
+      expect(error).toBe(mockError);
     }
   });
 
   it("Given error without data should reject with error object", async () => {
-    mockRejectedFetch(mockEmptyError)
+    mockRejectedFetch(mockEmptyError);
 
     try {
       await API.get("/failed-operation"); // should think of better name probably
