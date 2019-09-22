@@ -1,8 +1,7 @@
-import axios from "axios";
 import HttpClient from "../HttpClient";
+import { mockedAxios } from "../mockAxios";
 
 jest.mock("axios");
-const mockedAxios = axios as jest.Mocked<typeof axios>; // support for autocomplete
 
 const mockSuccessFetch = (returnedData: unknown) => mockedAxios.get.mockResolvedValueOnce({
   data: returnedData,
