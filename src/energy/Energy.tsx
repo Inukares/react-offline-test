@@ -3,10 +3,7 @@ import { isEmpty } from "lodash";
 import * as React from "react";
 import { IData, IResponse } from "../models/Energy/Response";
 import HttpClient from "../utils/HttpClient";
-import Chart from "./Chart";
-
-
-// type emptyArrayOrData = unknown[] | IResponse;
+import { Chart } from "./Chart";
 
 const initialState = Object.freeze({
   data: [] as any, // TODO: Work on actually meaningful type!
@@ -15,8 +12,6 @@ const initialState = Object.freeze({
 });
 
 type State = typeof initialState;
-
-// type Extended = IResponse extends State ? IResponse : State;
 
 // could be refactored to a hook
 export default class Energy extends React.Component<{}, IResponse | State> {
@@ -45,7 +40,6 @@ export default class Energy extends React.Component<{}, IResponse | State> {
   public render() {
     return (
       <Box justify={"center"}>
-        {this.state.loading && <div>Loading...</div>}
         {!isEmpty(this.state.data) && <Chart {...this.state.data} />}
       </Box>
     );

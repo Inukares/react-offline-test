@@ -7,7 +7,7 @@ import { IData, IGas } from "../models/Energy/Response";
 
 const plotData = (data: IGas[]) => data.map((generation: IGas) => ({ x: generation.fuel, y: generation.perc }));
 
-const Chart: React.FC<IData> = ({ generationmix, from, to }): React.ReactElement => {
+export const Chart: React.FC<IData> = ({ generationmix, from, to }): React.ReactElement => {
   const plottedData = plotData(generationmix);
   const timeFormat = "dd/MM/yyyy";
   const fromFormatted = format(new Date(from), timeFormat);
@@ -45,5 +45,3 @@ const Chart: React.FC<IData> = ({ generationmix, from, to }): React.ReactElement
     </>
   );
 };
-
-export default Chart;
