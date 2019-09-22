@@ -1,6 +1,5 @@
 import Axios, { AxiosResponse } from "axios";
 
-
 // a lot more could be added there, like other methods (e.g. POST), some actual logging when err happens etc.
 // should also add more advanced types for errors and therefore improve error type while fetching API call
 export default class HttpClient {

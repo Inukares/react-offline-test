@@ -1,4 +1,6 @@
 
+// todo: change naming so that it is more meaningful
+
 interface IGas {
   fuel: string;
   perc: number;
@@ -7,11 +9,11 @@ interface IGas {
 interface IData {
   from: Date;
   to: Date;
-  "generationMix": IGas[];
+  generationmix: IGas[];
 }
 
 interface IResponse {
   data: IData;
 }
 
-export { IData, IResponse };
+export { IData, IResponse, IGas };
