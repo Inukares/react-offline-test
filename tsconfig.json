@@ -1,13 +1,20 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "noEmit": false,
     "esModuleInterop": true,
     "sourceMap": true,
     "jsx": "react",
     "strict": true,
     "experimentalDecorators": true,
-    "lib": ["dom", "es2017"],
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "outDir": "./build"
   },
-  "exclude": ["build", "node_modules"]
+  "exclude": [
+    "build",
+    "node_modules"
+  ]
 }
